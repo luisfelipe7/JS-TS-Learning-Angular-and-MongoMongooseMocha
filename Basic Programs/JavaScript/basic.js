@@ -189,4 +189,143 @@ while(number7<=100){
     number7++;
 }
 
+// For Loops 
+
+// Printing even numbers from 0 to 10
+for(var number8=0;number8<=10;number8++){
+    if(number8%2==0){
+        console.log("I am the even number "+number8);
+    }
+}
+
+// Quiz - For Loops 
+
+// Printing odd numbers from 132 to 148 on the console 
+for(var number9=132;number9<=148;number9++){
+    if(!(number9%2==0)){
+        console.log("I am the odd number "+number9);
+    }
+}
+
+// Printing numbers between 25 and 100, divisible by 7 and 5
+for(var number10=25;number10<=100;number10++){
+    if((number10%7==0)&&(number10%5==0)){
+        console.log("I am the number "+number10+ " between 25 and 100, also divisible by 7 and 5");
+    }
+}
+
+// Continue and Break Statement
+
+// Continue will skip everything inside the loop and continue to the next iteration
+console.log("Printing the odd numbers from 0 to 10");
+for(var i=0;i<=10;i++){
+    if(i%2==0) continue;
+    console.log("Printing the odd number: "+i);
+}
+
+// Break will exit the complete loop 
+console.log("Printing the numbers until we find a number divisible by 5");
+for(var y=1; y<=10;y++){
+    if(y%5==0) break;
+    console.log("Printing the number "+y);
+}
+
+
+
+/* ////////////////////////// FUNCTIONS  /////////////////////////////// */
+
+// Declaring a Function, it won't run until a call it
+function sayHello(){
+    console.log("Hello World!");
+}
+
+// Calling the function
+sayHello();
+
+
+// Using Functions with Arguments
+
+function displayMessage(message){
+    alert(message);
+}
+
+displayMessage("Hi :) , This is my Message!");
+
+// Creating a new function 
+
+function potence(base, exponent){
+    return Math.pow(base,exponent);
+}
+
+console.log("The result of increasing 4 to 2 is "+potence(4,2));
+
+// Difference between function declaration and expression 
+
+// Using a function expression
+var calculateEven = function (value){
+    return (value%2==0);
+}
+var result = calculateEven(4);
+console.log("The number 4 is even? Answer: "+result);
+
+// With the function expression we can change the value to be a variable instead of a function 
+calculateEven = 4; 
+
+console.log("New value of the variable calculateEven "+calculateEven);
+
+// Quiz - Functions
+
+function subtraction(x,y){
+    return x- y;
+}
+
+function isOdd(x){
+    var result=false;
+    (!(x%2==0)) ? result=true : result=false;
+    return result;
+}
+
+function addition(x){
+    var total=x;
+    for(var i=1; i<=x; i++){
+        total+=i;
+    }
+    return total;
+}
+
+// Calling the methods for the quiz 
+console.log("Result of substraction : "+subtraction(4,2));
+console.log("Is 27 odd? Answer : "+isOdd(27));
+console.log("Result of addition : "+addition(2));
+
+
+/* ////////////////////////// FUNCTIONS SCOPE  /////////////////////////////// */
+
+// I can access variables declared out of functions and use them inside functions 
+
+var number11 = 10;
+console.log("Value of number11 : "+number11);
+
+function increasingNumber11(){
+    number11++;
+}
+
+increasingNumber11();
+console.log('Value of number11 after calling the function : '+number11);
+
+
+// I can't access variables declared inside of functions
+
+function simpleTest(){
+    var number12 = 10; 
+}
+
+simpleTest();
+
+// This will cause an error because I am using a variable declared inside a function:
+// console.log("Trying to access a variable declared inside a function "+number12);
+
+
+/* ////////////////////////// Arrays  /////////////////////////////// */
+
 
