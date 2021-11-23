@@ -328,4 +328,30 @@ simpleTest();
 
 /* ////////////////////////// Arrays  /////////////////////////////// */
 
+// You just need to use brackets to define an array
+var people = ['Felipe','Yenifer','Esteban','Kimberly'];
+people.push('Elias');
 
+// Printing the array
+console.log("Here is my array: "+people);
+
+// Accesing an element
+console.log("Here is the element located in the first position "+people[0]);
+
+// Declaring an array using a different way
+var students = [];
+students = new Array();
+
+students.push('ValueAt0');
+
+var students_length = students.length;
+
+console.log("Here is the value of students: "+students+" and the length of students: "+students_length);
+
+// Common methods on the arrays : 
+/* 
+push: Add element at the end of the array
+pop: Remove element at the end of the array 
+unshift: Add element at the beginning of the array
+shift: Remove element at the beginning of the array 
+*/
