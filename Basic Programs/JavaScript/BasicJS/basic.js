@@ -1,11 +1,11 @@
 /**
  * Author: Felipe Castro
  * File: Basic.js
- * Information: File with multiple topic to learn Java
+ * Information: File with multiple topic to learn JavaScript
  */
 
 
-/* ////////////////////////// BASIC DEFINITION  /////////////////////////////// */
+/* ------------------------- BASIC DEFINITION  ------------------------------ */
 
 // Starting my basic JavaScript File 
 console.log("I am an external JavaScript File, Hello Everyone!");
@@ -56,7 +56,7 @@ var valueEntered = prompt('How are you doing today?');
 console.log('He is ' + valueEntered + ' today');
 
 
-/* ////////////////////////// OPERATORS  /////////////////////////////// */
+/* ------------------------- OPERATORS  ------------------------------ */
 
 // Checking the operators
 var number1 = 2;
@@ -68,7 +68,7 @@ console.log("The residue of " + number2 + " and " + number1 + " is : " + (number
 console.log("Is " + number2 + " greater than " + number1 + "? Answer: " + (number2 > number1));
 
 
-/* ////////////////////////// BOOLEANS  /////////////////////////////// */
+/* ------------------------- BOOLEANS  ------------------------------ */
 
 // Checking the booleans 
 var number3 = 4;
@@ -81,7 +81,7 @@ console.log("Checking if " + number3 + " is === to " + number4 + " : " + (number
 console.log("Checking if " + number3 + " is === to '" + myVar3 + "' : " + (number3 === myVar3));
 console.log("Checking if " + number3 + " is !== to '" + myVar3 + "' : " + (number3 !== myVar3));
 
-/* ////////////////////////// CONDITIONALS  /////////////////////////////// */
+/* ------------------------- CONDITIONALS  ------------------------------ */
 
 // Checking the conditionals 
 var myGrade = 69;
@@ -164,7 +164,7 @@ switch (true) {
 }
 
 
-/* ////////////////////////// CONDITIONALS  /////////////////////////////// */
+/* ------------------------- CONDITIONALS  ------------------------------ */
 
 // Create DRY Code , DRY Means : DO NOT REPEAT YOURSELF 
 
@@ -239,7 +239,7 @@ for (var y = 1; y <= 10; y++) {
 
 
 
-/* ////////////////////////// FUNCTIONS  /////////////////////////////// */
+/* ------------------------- FUNCTIONS  ------------------------------ */
 
 // Declaring a Function, it won't run until a call it
 function sayHello() {
@@ -306,7 +306,7 @@ console.log("Is 27 odd? Answer : " + isOdd(27));
 console.log("Result of addition : " + addition(2));
 
 
-/* ////////////////////////// FUNCTIONS SCOPE  /////////////////////////////// */
+/* ------------------------- FUNCTIONS SCOPE  ------------------------------ */
 
 // I can access variables declared out of functions and use them inside functions 
 
@@ -333,7 +333,7 @@ simpleTest();
 // console.log("Trying to access a variable declared inside a function "+number12);
 
 
-/* ////////////////////////// Arrays  /////////////////////////////// */
+/* ------------------------- Arrays  ------------------------------ */
 
 // You just need to use brackets to define an array
 var people = ['Felipe', 'Yenifer', 'Esteban', 'Kimberly'];
@@ -378,7 +378,7 @@ var films = [['hobbit1', 'hobbit2', 'hobbit3'], ['matrix', 'matrix2', 'matrix3']
 console.log("Printing the godFather3:  " + ((films[2])[2]));
 
 
-/* ////////////////////////// Iterators  /////////////////////////////// */
+/* ------------------------- Iterators  ------------------------------ */
 
 
 // Using the books array we are going to iterate using a for loop
@@ -422,7 +422,7 @@ QUIZNumbersArray.forEach(function (number) {
 });
 
 
-/* ////////////////////////// OBJECTS  /////////////////////////////// */
+/* ------------------------- OBJECTS  ------------------------------ */
 
 // Creating an object 
 
@@ -543,7 +543,7 @@ var student5 = {
 console.log("Student5 wants to say Hi: ");
 student5.greet();
 
-/* ////////////////////////// OBJECTS  /////////////////////////////// */
+/* ------------------------- OBJECTS  ------------------------------ */
 
 // This will print the window object 
 console.log(this);

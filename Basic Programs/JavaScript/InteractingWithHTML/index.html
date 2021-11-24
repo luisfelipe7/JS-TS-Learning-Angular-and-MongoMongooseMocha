@@ -1,0 +1,84 @@
+<!--
+    Author: Felipe Castro
+    File: index.html
+    Information: Simple HTML file to import our Javascript file and Do Multiple Things
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- This is the head of my HTML File -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <title>JavaScript DOM</title>
+    <style type="text/css">
+        .myClass{
+            width:300px;
+            height: 20px;
+            background: gray;
+            color: white;
+            border: 5px solid yellowgreen;
+        }
+        .toggleBackground{
+            background-color: darkcyan;
+            color: white;
+        }
+        .mouseEnterItem{
+            background-color:darkmagenta;
+            color:azure;
+        }
+    </style>
+
+
+</head>
+
+<!-- This is the body of my HTML File -->
+
+<body>
+    <h1 id="bodyTitle">JavaScript DOM Manipulation</h1>
+    <p id="paragraph">Manipulating the HTML and doing things with JavaScript</p>
+
+    <div id="div1" class="background">Background div1</div>
+    <div id="div2" class="background">Background div2</div>
+    <div id="div3" class="background2">Background div3</div>
+    <br>
+    <p id="paragraph2"> I am learning <strong> how to use</strong> JavaScript and Angular</p>
+
+    <a href="https://github.com/"> GitHub Site</a>
+
+    <br>
+    <br>
+    <div>
+        <button id="button1">Click to this button</button>
+    </div>
+
+    <br>
+    <ul>
+        <li id='listItem1'>Cat</li>
+        <li id='listItem2'>Dog</li>
+        <li id='listItem3'>Horse</li>
+    </ul>
+
+    <h4>TO DO LIST </h4>
+    <ul>
+        <li class='toDoItem'>Study/Code</li>
+        <li class='toDoItem'>Get a Job</li>
+        <li class='toDoItem'>Do Exercise</li>
+        <li class='toDoItem'>Watch Anime</li>
+    </ul>
+
+</body>
+
+<!-- Inserting JavaScript code on the HTML file (In-Line Script) -->
+<script>
+    console.log("Hello world!");
+</script>
+
+<!-- Inserting JavaScript code on the HTML file (Importing Script/ External Script) -->
+<script src='script.js'></script>
+
+
+</html>
