@@ -1,7 +1,7 @@
 <!--
     Author: Felipe Castro
-    File: basic2.html
-    Information: HTML File with Multiple Inputs and Resources
+    File: index.html
+    Information: HTML File with multiple Inputs and Resources to Practice JQuery and Ajax
 -->
 
 <!DOCTYPE html>
@@ -10,6 +10,9 @@
 <head>
     <meta charset="utf-8" />
     <title> World </title>
+    <!-- Including the JS File-->
+    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -29,7 +32,11 @@
             <li>Canada</li>
             <li>Costa Rica</li>
         </ul>
-        <img src="https://i.pinimg.com/originals/0d/c9/68/0dc968448592a7d533096b74c263cc40.gif" />
+
+        <!-- Adding the Ajax Function-->
+        <img id="movingGif" onclick="changeGif()"
+            src="https://i.pinimg.com/originals/0d/c9/68/0dc968448592a7d533096b74c263cc40.gif" />
+
         <br>
         <a href="https://www.worldometers.info/geography/alphabetical-list-of-countries/"> Click here to see the
             complete list of countries</a>
@@ -70,7 +77,11 @@
             <br>
             <input type="submit" vaue="Send" />
             <input type="reset" name="Reset" />
-        </form>
+            <br>
+            <br>
+            <form>
+                <button style="background-color:chartreuse" formaction="index2.html">Move to next page</button>
+            </form>
     </div>
 </body>
 

@@ -1,0 +1,30 @@
+{
+    "squadName": "DC Squad", 
+    "hometown": "Gotham City",
+    "formed": 1939,
+    "active" : true,
+    "heroes": [
+        {
+            name: "Batman",
+            age: 30,
+            secretIdentity: "Bruce Wayne"
+        },
+        {
+            name: "Robin",
+            age: 27,
+            secretIdentity: "Dick Grayson"
+        }
+    ],
+    "enemies":[
+        {
+            name: "Joker",
+            age: 32,
+            secretIdentity: "Arthur Fleck"
+        },
+        {
+            name: "Riddler",
+            age: 30,
+            secretIdentity: "E. Nigma"
+        }
+    ]
+}

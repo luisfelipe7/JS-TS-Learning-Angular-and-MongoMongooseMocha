@@ -1,0 +1,56 @@
+<!--
+    Author: Felipe Castro
+    File: basic.html
+    Information: Simple HTML file 
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- This is the head of my HTML File -->
+
+<head>
+    <!-- ---- INCLUDING ALL THE SCRIPTS AND CSS FILES HERE ---- -->
+
+    <!-- Including fonts from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
+    <!-- Including the Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Including the script for JQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Including my personal javascript -->
+    <script src='script.js'></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <title> DC</title>
+    <script src="script.js"></script>
+</head>
+
+
+<!-- This is the body of my HTML File -->
+
+<body>
+    <h1 id='initialHeader'>Learning about superheroes </h1>
+    <h2 class="sectionHeader1">Section #1 </h2>
+    <p id="paragraph1" class='paragraphStyle'>Here we are going to learn about superheroes</p>
+    <button type="button" id="buttonTable" onClick="generateTable()">Press to show table</button>
+    <button type="button" id="hideHeader1" >Press to hide header</button>
+    <div id="showTable" style="overflow-x:auto;">
+    </div>
+    <br>
+    <br>
+    <!-- Text to use JQuery and hide it-->
+    <h4 class="elementToDissapear"> If you click on me, I will dissapear</h4>
+    <!-- Button to go back to previous page -->
+    <form>
+        <button style="background-color:chartreuse" formaction="index.html">Move to previous page</button>
+    </form>
+</body>
+
+</html>

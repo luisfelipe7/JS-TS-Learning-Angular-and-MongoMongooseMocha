@@ -1,0 +1,13 @@
+<!--
+    Author: Felipe Castro
+    File: basicXMLStructure.css
+    Information: Basic XML Structure File
+-->
+
+<!-- Basic Structure of XML -->
+<root attribute="valueOfTheAttribute">
+  <child>
+    <subchild>.....</subchild>
+  </child>
+</root>
+<!-- This is a comment in XML -->

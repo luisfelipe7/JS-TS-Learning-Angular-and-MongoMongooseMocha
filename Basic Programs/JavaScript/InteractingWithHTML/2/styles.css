@@ -1,0 +1,48 @@
+/* Apply to all the tags on the file */
+*{
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: "Trirong", serif;
+}
+
+/* Applying the styles in all the elements that are inside the tag called <p> and <h2>*/
+p, h2 {
+    color: whitesmoke;
+    background-color: black;
+}
+
+/* Applying style to the class called elementToDissapear */
+.elementToDissapear{
+    color:saddlebrown;
+    background-color:gainsboro;
+    border: 2px dodgerblue;
+    border-style: outset;
+    opacity: 2;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/* Applying style to header (h2) with class (sectionHeader1) */
+h2.sectionHeader1{
+    height: 30px;
+    width: 200px;
+    border: 3px solid greenyellow;
+    outline-style: dotted;
+}
+
+/* Applying the style to the paragraph1 id when the mouse enter */
+.mouseEnterParagraph1{
+    background-color: pink;
+    color: black;
+}
+
+
+/* Setting a background with an image to the website 
+body{
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+
+}
+*/

@@ -1,0 +1,24 @@
+/*
+    Author: Felipe Castro
+    File: basic.css
+    Information: Simple CSS file to Implement multiple styles
+*/
+
+/* Apply styles in all the elements inside the <body> tag of our html */
+body {
+    color: black;
+    background-color: white;
+}
+/* Apply styles in all the elements having the class called myClass */
+.myClass{
+    border: 2px solid red;
+    margin: 20px;
+    padding: 20px;
+}
+/* Apply styles in all the elements having the id called myId */
+#myId{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}

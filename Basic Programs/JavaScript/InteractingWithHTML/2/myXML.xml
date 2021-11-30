@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Basic Example of a XML -->
+<videogames_list store="Dragon">
+    <videogame name="Bloodborne">
+        <quantity>4</quantity>
+        <price>20$</price>
+        <available>true</available>
+        <platforms>
+            <console>ps4</console>
+        </platforms>
+    </videogame>
+    <videogame name="Fortnite">
+        <quantity>Online</quantity>
+        <price>Free</price>
+        <available>true</available>
+        <platforms>
+            <console>ps4</console>
+            <console>switch</console>
+            <console>pc</console>
+            <console>xbox</console>
+        </platforms>
+    </videogame>
+    <videogame name="Overwatch">
+        <quantity>0</quantity>
+        <price>59$</price>
+        <available>false</available>
+        <platforms>
+            <console>ps4</console>
+            <console>switch</console>
+            <console>pc</console>
+            <console>xbox</console>
+        </platforms>
+    </videogame>
+    <videogame name="Mario Party">
+        <quantity>2</quantity>
+        <price>49$</price>
+        <available>true</available>
+        <platforms>
+            <console>switch</console>
+        </platforms>
+    </videogame>
+</videogames_list>

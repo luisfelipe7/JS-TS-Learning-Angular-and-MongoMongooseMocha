@@ -1,0 +1,23 @@
+{
+    "attributeString": "stringValue",
+    "attributeNumber": 10,
+    "attributeBoolean": true,
+    "object": {
+        "nameOfObject": "Name",
+        "ageOfObject": 10
+    },
+    "simpleArray": [
+        5,
+        4
+    ],
+    "objectsArray": [
+        {
+            "object1Name": "Name",
+            "object1Status": true
+        },
+        {
+            "object2Name": "Name",
+            "object2Status": true
+        }
+    ]
+}
