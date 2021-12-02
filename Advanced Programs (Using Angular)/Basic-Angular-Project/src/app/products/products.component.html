@@ -1,0 +1,79 @@
+<div class="list-group">
+  <li class="list-group-item active" aria-current="true">My products</li>
+  <label class="list-group-item">
+    <input id='box1' class="form-check-input me-1" type="checkbox" value="Coffee">
+    Coffee
+  </label>
+  <label class="list-group-item">
+    <input id='box2' class="form-check-input me-1" type="checkbox" value="Chocolate">
+    Chocolate
+  </label>
+  <label class="list-group-item">
+    <input id='box3' class="form-check-input me-1" type="checkbox" value="Milk">
+    Milk
+  </label>
+  <label class="list-group-item">
+    <input id='box4' class="form-check-input me-1" type="checkbox" value="Water">
+    Water
+  </label>
+  <div id='displayAlert'>
+    <!-- Button to trigger success -->
+    <button id='buttonToDisplayModal' type="button" class="btn btn-primary invisible collapse" data-bs-toggle="modal"
+      data-bs-target="#successModal">
+      Launch hidden modal of success
+    </button>
+
+    <!-- Button to trigger failure -->
+    <button id='buttonToDisplayModal2' type="button" class="btn btn-primary invisible collapse" data-bs-toggle="modal"
+      data-bs-target="#failureModal">
+      Launch hidden modal of failure
+    </button>
+
+
+    <!-- Modal in charge of showing the sucess -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">SUCCESS</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="successModalContent" class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal in charge of showing the failure message -->
+    <div class="modal fade" id="failureModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ERROR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="failureModalContent" class="modal-body">
+            No products were selected to be added
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br>
+<!-- Inserting value of attribute on variable in my HTML -->
+<button type="button" class="btn btn-secondary" [disabled]="!addProduct" (click)="onClick()">Add Product</button>
+<!-- Print directly the value of the variable add product -->
+<br>
+<br>
+<p> Printing directly the value of my variable called addProduct: {{!addProduct}} </p>
+<br>
