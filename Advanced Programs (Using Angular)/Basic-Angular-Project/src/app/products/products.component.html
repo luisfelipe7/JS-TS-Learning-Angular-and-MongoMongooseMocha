@@ -75,5 +75,21 @@
 <!-- Print directly the value of the variable add product -->
 <br>
 <br>
+<!--
 <p> Printing directly the value of my variable called addProduct: {{!addProduct}} </p>
+-->
+<label>Enter suggestions about products to add</label>
+<input type="text" class="form-control"
+(input)=(onWritingCaptureText($event))>
+<!-- Printing the value of the variable in charge of saving the suggestions-->
+<label>Your suggestions: {{suggestedProducts}} </label>
+<br>
+<br>
+
+<!-- Playing with two way binding -->
+<label>Enter your complains about the products</label>
+<input type="text" class="form-control" [(ngModel)]="suggestedProducts">
+
+
+
 <br>

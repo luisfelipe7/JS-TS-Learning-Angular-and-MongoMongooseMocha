@@ -513,10 +513,10 @@ function printUniverisityInformation(university) {
 }
 
 var university1 = createUniverisity("UNA", false, 1890);
-var university2 = createUniverisity("TEC", false, 1880);
 var university3 = createUniverisity("UX", true, 1885);
 
 var universities = [university1, university2, university3];
+var university2 = createUniverisity("TEC", false, 1880);
 
 universities.forEach(function (university) {
     if (!(university.hasGone)) {

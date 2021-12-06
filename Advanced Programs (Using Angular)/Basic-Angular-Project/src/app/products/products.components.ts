@@ -11,6 +11,7 @@ export class ProductsComponent {
   addProduct: boolean = true;
   greet: string = 'Hello';
   productStatus: string = 'No product added';
+  suggestedProducts:string ='No value';
 
   //Creating a constructor
   constructor() {
@@ -20,6 +21,8 @@ export class ProductsComponent {
   }
 
   // Creating the methods
+
+  // On Clicing the Button
   onClick() {
     //Creating the array of products to add
     let productsToAdd: any = '';
@@ -29,7 +32,7 @@ export class ProductsComponent {
       // Checking each checkbox to verify if it is checked
       if (($('#box' + i)).is(':checked')) {
         let valueOfCheckbox: any = ($('#box' + i)).attr('value');
-        productsToAdd += ' <br>' + valueOfCheckbox+'';
+        productsToAdd += ' <br>' + valueOfCheckbox + '';
       }
     }
 
@@ -43,4 +46,12 @@ export class ProductsComponent {
       $('#buttonToDisplayModal2').trigger('click');
     }
   }
+
+  // On Writting in the TextBox, everytime we type a letter the method is going to be executed
+  onWritingCaptureText(event:any) {
+    // We can print the event: console.log(event);
+    // Saving the value of the textBox in a variable
+    this.suggestedProducts=(<HTMLInputElement>event.target).value;
+  }
+
 }

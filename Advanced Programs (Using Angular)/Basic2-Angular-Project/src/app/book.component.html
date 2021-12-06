@@ -1,0 +1,212 @@
+<h1>Book List</h1>
+<h4>Showing the Book with ID 1: </h4>
+<div>
+  <p [textContent]="book.getAttributeByValue(2)"> </p> By {{book.getAttributeByValue(3)}}
+</div>
+<br>
+<h4> Other Books: </h4>
+<div [class]="getClassBinding(1)">
+  <h2>Second book is {{model.getBookId(1).name}}</h2>
+</div>
+<div [class]="getClassBinding(3)">
+  <h2>Third book is {{model.getBookId(3).name}}</h2>
+</div>
+
+<button class="btn btn-success" [class.disabled]="disabledButton"> Submitt</button>
+<br><br>
+<h4> New Books: </h4>
+<div class="m-3" [ngClass]="getClassObject(4)">
+  <h2> <span [style.color]="colorForMyStyle"> 1) </span>{{model.getBookId(4).name}}</h2>
+</div>
+<div class="m-3" [ngClass]="getClassObject(5)">
+  <h2> <span [ngStyle]="getStyleBinding(5)"> 2) </span> 2) {{model.getBookId(5).name}}</h2>
+</div>
+<br>
+
+<div name="myDiv" (click)="onClickMyDiv($event)">
+  <button name='myButton' class="btn btn-success " (click)="onClickMyButton($event)">Send Data</button>
+  <button name='myButton2' class="btn btn-success " (click)="onClickMyButton($event)">Request Data</button>
+</div>
+
+<br>
+<input (keyup)="onKeyUpInMyField($event)"> &nbsp;
+<input (keyup.enter)="onEnterInMyField()">
+<br>
+<br>
+<input [(ngModel)]="farewell" (keyup)="onKeyUpMyField3($event)">
+
+<br>
+<br>
+
+<h2> Learning about Pipes </h2>
+
+<!-- Using Pipes -->
+
+<h4> Text Pipes</h4>
+{{name1}} = Normal Text <br>
+{{name1 | lowercase}} = Text with Lower Pipe <br>
+{{name1 | titlecase}} = Text with Title Pipe <br>
+<h4> Number Pipes</h4>
+{{price}} = Normal Number <br>
+{{price | number}} = Number Pipe <br>
+{{price | number:'1.3-3'}} = Number Pipe with only three decimals after the comma<br>
+<!-- With this I am only saying that I want three digits after the comma -->
+<h4> Date Pipes</h4>
+{{today}} = Normal Date <br>
+{{today | date}} = Date Pipe <br>
+{{today | date:'short'}} = Date Short Pipe <br>
+{{today | date:'medium'}} = Date Medium Pipe <br>
+{{today | date:'MM d, y, h:mm:ss a'}} = Data Pipe with this format MM d, y, h:mm:ss a <br>
+<!-- Using Custom Pipes -->
+<h4>Using a custom pipe </h4>
+{{description | custompipe}} = CustomPipe <br>
+<br><br>
+
+<!-- Learning about directives -->
+
+<h2> Learning about directives </h2>
+<br>
+<h4> ngIf </h4>
+<b> Simple if statement </b>
+<div *ngIf="showImage">
+  <!-- Showing image if the variable showImage is true -->
+  <p> Showing this because showImage variable is true</p>
+  <img src="http://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png" alt="W3Schools.com"
+    style="width:104px;height:104px;">
+</div>
+<b> If statement with then and else</b>
+<ng-template *ngIf="myNumber2>2; then showBlock1; else showBlock2"></ng-template>
+<ng-template #showBlock1>
+  <p>Showing this because the variable myNumber2 is bigger than 2</p>
+  <p> Value of myNumber2 {{myNumber2}}</p>
+</ng-template>
+<ng-template #showBlock2>
+  <p>Showing this because the variable myNumber2 is smaller than 2 or 2</p>
+  <p> Value of myNumber2 {{myNumber2}}</p>
+</ng-template>
+<h4> ngSwitch </h4>
+<b> Switch Statement </b>
+<div [ngSwitch]="myNumber3">
+  <p *ngSwitchCase="1"> Showing this because the value of the variable is 1, here you can see it: {{myNumber3}} </p>
+  <p *ngSwitchCase="2"> Showing this because the value of the variable is 2, here you can see it: {{myNumber3}} </p>
+  <p *ngSwitchCase="3"> Showing this because the value of the variable is 3, here you can see it: {{myNumber3}} </p>
+</div>
+<h4> ngFor/ngForOf</h4>
+<b> ngFor Statement </b>
+<br>
+<table class="table table-sm table-hover table-bordered table-striped table-dark">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of myListOfHeroes; let i = index">
+      <th scope="row">{{hero.id}}</th>
+      <td>{{hero.name}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Learning about forms -->
+
+<h2> Learning about forms </h2>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="m-4">
+
+
+        <!-- New Form to learn about ngForms-->
+        <p>Form to test ngForm and ngSubmit</p>
+        <form #form="ngForm" (ngSubmit)="submitForm(form)">
+        <div class="bg-danger text-white" *ngIf="formSubmit && form.invalid">
+          There is a problem. Please check your information
+          <ul>
+            <li *ngFor="let error of getFormValidationErrors(form)">
+              {{error}}
+            </li>
+          </ul>
+        </div>
+          <div class="form-group">
+            <label> Name </label>
+            <input required minlength="3" maxlength="30" [(ngModel)]="newBook.name" name="bName" #namePerson="ngModel"
+              placeholder="Enter the name" (change)="verifyName(namePerson)" type="text" class="form-control">
+            <div class="alert alert-danger" *ngIf="(formSubmit && namePerson.invalid)">
+              <p *ngFor="let error of getValidationErrors(namePerson)">
+                {{error}}
+              </p>
+              <!--   <p *ngIf="namePerson.errors?.['required']">Name is required. Please fill in </p>
+              <p *ngIf="namePerson.errors?.['minlength'] || namePerson!.errors?.['maxlength']">You must enter minimum 3
+                characters and maximum 30 </p> -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label> Writer </label>
+            <input required minlength="10" maxlength="100" [(ngModel)]="newBook.writer" name="bWriter"
+              #writerBook="ngModel" placeholder="Enter the writter" type="text" class="form-control">
+            <div class="alert alert-danger" *ngIf="!writerBook.valid && writerBook.touched">
+              <p *ngIf="writerBook.errors?.['required']">Writer is required. Please fill in </p>
+              <p *ngIf="writerBook.errors?.['minlength'] || writerBook!.errors?.['maxlength']">You must enter minimum 10
+                characters and maximum 100 </p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label> Price </label>
+            <input required pattern="^[0-9]*$" [(ngModel)]="newBook.price" name="bPrice" #priceBook="ngModel"
+              placeholder="Enter the price" type="text" class="form-control">
+            <div class="alert alert-danger" *ngIf="!priceBook.valid && priceBook.touched">
+              <p *ngIf="priceBook.errors?.['required']">New Book is required. Please fill in </p>
+              <p *ngIf="priceBook.errors?.['pattern'] || priceBook!.errors?.['maxlength']">You must only enter numbers
+              </p>
+            </div>
+          </div>
+          <button (click)="addBook(newBook)" class="btn btn-primary" [disabled]="formSubmit && form.invalid" [class.btn-secondary]="formSubmit && form.invalid" >Submit</button>
+        </form>
+
+      </div>
+
+      <br><br>
+      <div class="bg-primary text-white m-3 p-3">
+        <p>Form to test quick validations</p>
+        {{jsonBook}}
+        <div class="form-group">
+          <label> Name </label>
+          <input required minlength="3" maxlength="30" [(ngModel)]="newBook.name" name="bName" #namePerson="ngModel"
+            placeholder="Enter the name" (change)="verifyName(namePerson)" type="text" class="form-control">
+          <div class="alert alert-danger" *ngIf="!namePerson.valid && namePerson.touched">
+            <p *ngFor="let error of getValidationErrors(namePerson)">
+              {{error}}
+            </p>
+            <!--   <p *ngIf="namePerson.errors?.['required']">Name is required. Please fill in </p>
+            <p *ngIf="namePerson.errors?.['minlength'] || namePerson!.errors?.['maxlength']">You must enter minimum 3
+              characters and maximum 30 </p> -->
+          </div>
+        </div>
+        <div class="form-group">
+          <label> Writer </label>
+          <input required minlength="10" maxlength="100" [(ngModel)]="newBook.writer" name="bWriter"
+            #writerBook="ngModel" placeholder="Enter the writter" type="text" class="form-control">
+          <div class="alert alert-danger" *ngIf="!writerBook.valid && writerBook.touched">
+            <p *ngIf="writerBook.errors?.['required']">Writer is required. Please fill in </p>
+            <p *ngIf="writerBook.errors?.['minlength'] || writerBook!.errors?.['maxlength']">You must enter minimum 10
+              characters and maximum 100 </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label> Price </label>
+          <input required pattern="^[0-9]*$" [(ngModel)]="newBook.price" name="bPrice" #priceBook="ngModel"
+            placeholder="Enter the price" type="text" class="form-control">
+          <div class="alert alert-danger" *ngIf="!priceBook.valid && priceBook.touched">
+            <p *ngIf="priceBook.errors?.['required']">New Book is required. Please fill in </p>
+            <p *ngIf="priceBook.errors?.['pattern'] || priceBook!.errors?.['maxlength']">You must only enter numbers
+            </p>
+          </div>
+        </div>
+        <button (click)="addBook(newBook)" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
