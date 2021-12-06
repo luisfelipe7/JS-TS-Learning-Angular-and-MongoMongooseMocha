@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Book } from './book.model';
+import { ImageValidator } from './image.validator';
 import { BookRepository } from './repository.model';
 
 @Component({
@@ -51,6 +52,23 @@ export class BookComponent {
 
   // Variable to control de submit of the form
   formSubmit:boolean = false;
+
+
+  // --------- Variables for the reactive forms ----------
+  // Variables to handle the fields
+  // Creating a form group for our fields and Adding Validators
+  bookForm = new FormGroup({
+  nameReactiveField : new FormControl('Harry Potter and The Chamber of Secrets', [Validators.required,Validators.minLength(3)]),
+  writerReactiveField : new FormControl('JK Rowling',Validators.required),
+  priceReactiveField : new FormControl('100$',Validators.required),
+  imageReactiveField : new FormControl('.jpg',[Validators.required,ImageValidator.isValidxtension, Validators.minLength(3)])
+  });
+
+  /* nameReactiveField = new FormControl('Harry Potter and The Chamber of Secrets');
+  writerReactiveField = new FormControl('JK Rowling');
+  priceReactiveField = new FormControl('100$'); */
+
+
 
   // ---------------------- METHODS ---------------------
   // Get Class Binding
@@ -193,6 +211,35 @@ export class BookComponent {
     })
     return messages;
   }
+
+
+  // ----------- Methods for the reactive form  ----------
+  updateNameReactiveForm(){
+    //this.nameReactiveField.setValue('Harry Potter and The Philosophal Stone');
+  }
+
+  onSubmit(){
+    console.log(this.bookForm.value);
+  }
+
+  updateBook(){
+    // We can update an specific attribute with patchValue
+    this.bookForm.patchValue({
+        nameReactiveField: 'It',
+        price: '5'
+    })
+  }
+
+  get obtainNameReactiveField(){
+    return this.bookForm.get('nameReactiveField');
+  }
+
+  get obtainImageReactiveField(){
+    return this.bookForm.get('imageReactiveField');
+  }
+
+
+
 
 
 }

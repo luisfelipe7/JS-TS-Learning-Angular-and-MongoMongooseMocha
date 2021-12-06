@@ -122,14 +122,14 @@
         <!-- New Form to learn about ngForms-->
         <p>Form to test ngForm and ngSubmit</p>
         <form #form="ngForm" (ngSubmit)="submitForm(form)">
-        <div class="bg-danger text-white" *ngIf="formSubmit && form.invalid">
-          There is a problem. Please check your information
-          <ul>
-            <li *ngFor="let error of getFormValidationErrors(form)">
-              {{error}}
-            </li>
-          </ul>
-        </div>
+          <div class="bg-danger text-white" *ngIf="formSubmit && form.invalid">
+            There is a problem. Please check your information
+            <ul>
+              <li *ngFor="let error of getFormValidationErrors(form)">
+                {{error}}
+              </li>
+            </ul>
+          </div>
           <div class="form-group">
             <label> Name </label>
             <input required minlength="3" maxlength="30" [(ngModel)]="newBook.name" name="bName" #namePerson="ngModel"
@@ -163,12 +163,14 @@
               </p>
             </div>
           </div>
-          <button (click)="addBook(newBook)" class="btn btn-primary" [disabled]="formSubmit && form.invalid" [class.btn-secondary]="formSubmit && form.invalid" >Submit</button>
+          <button (click)="addBook(newBook)" class="btn btn-primary" [disabled]="formSubmit && form.invalid"
+            [class.btn-secondary]="formSubmit && form.invalid">Submit</button>
         </form>
-
       </div>
-
       <br><br>
+
+
+      <!-- Form to test quick validations -->
       <div class="bg-primary text-white m-3 p-3">
         <p>Form to test quick validations</p>
         {{jsonBook}}
@@ -207,6 +209,68 @@
         </div>
         <button (click)="addBook(newBook)" class="btn btn-primary">Submit</button>
       </div>
+      <br><br>
+
+
+      <!-- Reactive Forms -->
+      <div class="bg-info text-white m-3 p-3">
+        <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" formControlName="nameReactiveField">
+            <!-- <input class="form-control" [formControl]="nameReactiveField"> -->
+
+            <!-- Adding the part of the warning message -->
+            <div class="alert alert-danger"
+              *ngIf="obtainNameReactiveField?.touched && obtainNameReactiveField?.invalid">
+              <ul>
+                <li *ngIf="obtainNameReactiveField!.errors?.['required']">
+                  Name is required
+                </li>
+                <li *ngIf="obtainNameReactiveField!.errors?.['minlength']">
+                  Min. 3 characters
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Writer</label>
+            <input class="form-control" formControlName="writerReactiveField">
+            <!-- <input class="form-control" [formControl]="writerReactiveField"> -->
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" formControlName="priceReactiveField">
+            <!-- <input class="form-control" [formControl]="priceReactiveField"> -->
+          </div>
+          <div class="form-group">
+            <label>Image</label>
+            <input class="form-control" formControlName="imageReactiveField">
+            <!-- <input class="form-control" [formControl]="imageReactiveField"> -->
+
+            <!-- Adding the part of the warning message -->
+            <div class="alert alert-danger"
+              *ngIf="obtainImageReactiveField?.touched && obtainImageReactiveField?.invalid">
+              <ul>
+                <li *ngIf="obtainImageReactiveField!.errors?.['required']">
+                  Image is required
+                </li>
+                <li *ngIf="obtainImageReactiveField!.errors?.['minlength']">
+                  Min. 3 characters
+                </li>
+                <li *ngIf="obtainImageReactiveField!.errors?.['wrongExtension']">
+                  The extension inserted for the image is not valid
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+          <button type="submit" (click)="updateBook()" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+
     </div>
   </div>
 </div>
