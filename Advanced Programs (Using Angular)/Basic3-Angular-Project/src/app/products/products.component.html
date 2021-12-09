@@ -1,0 +1,39 @@
+<div call="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <a routerLink="/products" class="list-group-item list-group-item-action active">
+          Products
+        </a>
+        <li *ngFor="let product of products" class="list-group-item list-group-item-action">
+          {{product.name}} &nbsp;
+          <!-- Another Way to call the router and send the id-->
+          <button [routerLink]="['/products',product.id]" type="button" class="btn btn-info">Details</button> &nbsp;
+          <button [routerLink]="['/products',product.id,'edit']" type="button" class="btn btn-success">Edit</button>
+        </li>
+      </ul>
+    </div>
+</div>
+
+<div call="row">
+  <div class="col-md-12">
+    <br>
+    <p><a routerLink="/products">Products </a></p>
+    <div class="mt-2">
+      <button (click)="showProducts()" class="btn btn-primary">Show Products</button> <br><br>
+      <button class="btn btn-warning ml-3" routerLink="/products" [queryParams]="{page:1, order:'newest'}">Newest
+        Products</button> <br><br>
+      <!-- Sending the Query Parameters -->
+      <button class="btn btn-dark ml-3" routerLink="/products" [queryParams]="{page:1, order:'bestseller'}">Best Seller
+        Products</button> <br><br>
+      <button class="btn btn-success ml-3" routerLink="/products" [queryParams]="{page:1, order:'favorite'}">Favorite
+        Products</button>
+    </div>
+  </div>
+</div>
+
+<div call="row">
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

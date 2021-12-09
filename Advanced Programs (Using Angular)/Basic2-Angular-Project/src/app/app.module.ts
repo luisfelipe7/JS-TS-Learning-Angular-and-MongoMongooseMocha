@@ -4,18 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { BookComponent } from './book.component';
 import { CustomPipe } from './custom.pipe';
+import { PostComponent } from './post/post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     BookComponent,
-    CustomPipe
+    CustomPipe,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [BookComponent]
+  bootstrap: [BookComponent,PostComponent]
 })
 export class AppModule { }

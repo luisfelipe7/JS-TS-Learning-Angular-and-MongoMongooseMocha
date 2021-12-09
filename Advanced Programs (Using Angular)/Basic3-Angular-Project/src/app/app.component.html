@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs m-4">
+        <li class="nav-item">
+          <!-- Using Router Link to avoid the page refreshing each time we click the link, so avoid using href-->
+          <!-- And Router Link Active will be in charge of adding the class active when the link is active-->
+          <!-- Router Link Active Options will allow us to add the option of exact path, avoiding home to be active all the time -->
+          <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> Home</a>
+        </li>
+        <li class="nav-item">
+          <!-- This will add to my current link : currentLink/products if I put / to my link it will start from the home link : homeLink/products -->
+          <a routerLink="products" class="nav-link" routerLinkActive="active"> Products</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="users" class="nav-link" routerLinkActive="active"> Users</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <app-category></app-category>
+    </div>
+    <div class="col-md-12">
+      <!--
+      No longer required since we defined routes
+      <app-home></app-home>
+      <app-products></app-products>
+      <app-users></app-users> -->
+
+      <!-- The router outlet will be in charge of checking app module and verify the router module -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

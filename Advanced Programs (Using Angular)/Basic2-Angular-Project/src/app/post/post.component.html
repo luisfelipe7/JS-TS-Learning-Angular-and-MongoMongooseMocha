@@ -1,0 +1,29 @@
+<!-- HTML Module -->
+
+<p> Post Works - Testing the HTML Module </p>
+
+<!-- Http Module -->
+
+<!-- Field to show the errors-->
+<div class="alert alert-danger" *ngIf="errorFound" >{{errorFound}}</div>
+<!-- Text Field -->
+<input type="text" class="form-control m-3"  (keyup.enter)="createPost(input)" #input [(ngModel)]="myTextField">
+<!-- List of Posts-->
+  <ul class="list-group">
+    <li *ngFor="let post of posts; let i=index" class="list-group-item">
+      {{post.id}} - {{post.title}}
+      <br>
+      {{post.body}}
+      &nbsp;
+      <button (click)="updatePost(post)" class="btn btn-primary">PUT</button> &nbsp;
+      <button (click)="patchPost(post)" class="btn btn-info">PATCH</button> &nbsp;
+      <button (click)="deletePost(post)" class="btn btn-danger">DELETE</button>
+    </li>
+  </ul>
+
+
+
+
+
+
+

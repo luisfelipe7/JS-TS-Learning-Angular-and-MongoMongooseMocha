@@ -1,14 +1,25 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Basic2AngularProject</title>
   <base href="/">
-  <link rel="stylesheet" href="assets/form.css"
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/form.css" <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-book></app-book>
+  <!-- Calling the Post App -->
+  <app-post></app-post>
+  <br><br>
+
+  <!-- Calling the Book App -->
+  <!-- Using NgIf to hide the app book component -->
+  <div ng-hide="hideit">
+    <app-book></app-book>
+  </div>
+
 </body>
+
 </html>
