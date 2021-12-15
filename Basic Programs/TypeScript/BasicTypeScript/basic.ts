@@ -2,9 +2,8 @@
  * Author: Felipe Castro
  * File: Basic.ts
  * Information: Basic TypeScript file to learn the basics
+ * How to run this file: First do tsc basic.ts then node basic.js
  */
-
-
 
 
 /* ------------------------- VARIABLES, ARRAYS AND DATA TYPES ---------------------------- */

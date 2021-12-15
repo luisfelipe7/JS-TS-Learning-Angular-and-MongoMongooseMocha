@@ -1,3 +1,11 @@
+/**
+ * Author: Felipe Castro
+ * File: StreamsAndBuffers.js
+ * Information: Basic JS file to learn NodeJS
+ * How to run this file: Just do node streamsAndBuffers.js
+ */
+
+
 const http = require('http');
 const fs = require('fs');
 

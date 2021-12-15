@@ -1,3 +1,10 @@
+/**
+ * Author: Felipe Castro
+ * File: helper.js
+ * Information: Basic JS file to learn NodeJS
+ * How to run this file: Just do node helper.js
+ */
+
 // --------------- HELPER MODULE ----------------
 
 const logging = function (user) {

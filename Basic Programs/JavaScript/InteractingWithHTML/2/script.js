@@ -1,9 +1,10 @@
-/*
-
-Author: Felipe Castro
-File: script.js
-Information: Practicing JQuery and Ajax
-
+/** 
+*
+* Author: Felipe Castro
+* File: script.js
+* Information: Practicing JQuery and Ajax
+* How to run it: Open the index.html and it will be in charge of importing this script
+*
 */
 
 // ------------------------- Using Ajax -------------------------

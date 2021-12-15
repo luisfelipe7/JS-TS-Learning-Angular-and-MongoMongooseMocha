@@ -2,6 +2,7 @@
  * Author: Felipe Castro
  * File: script.js
  * Information: Practicing JavaScript and manipulating the HTML
+ * How to run this file: Just open the index.html file on the browser
  */
 
 // ------------------------- Manipulating the Elements on the HTML -------------------------

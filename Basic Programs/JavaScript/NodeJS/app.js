@@ -1,3 +1,10 @@
+/**
+ * Author: Felipe Castro
+ * File: app.js
+ * Information: Basic JS file to learn NodeJS
+ * How to run this file: Just do node app.js
+ */
+
 // To execute it with NodeJS, we just need to do: node app.js
 console.log('Hello World');
 

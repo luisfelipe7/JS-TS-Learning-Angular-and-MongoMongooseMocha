@@ -1,3 +1,10 @@
+/**
+ * Author: Felipe Castro
+ * File: createServer.js
+ * Information: Basic JS file to learn NodeJS
+ * How to run this file: Just do node createServer.js
+ */
+
 // Creating a Simple Server
 
 // Using the http module 

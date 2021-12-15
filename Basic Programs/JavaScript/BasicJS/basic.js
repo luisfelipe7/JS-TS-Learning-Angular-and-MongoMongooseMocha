@@ -2,6 +2,7 @@
  * Author: Felipe Castro
  * File: Basic.js
  * Information: File with multiple topic to learn JavaScript
+ * How to run this file: Just open the file called basic.html and this fill will be imported and executed
  */
 
 
