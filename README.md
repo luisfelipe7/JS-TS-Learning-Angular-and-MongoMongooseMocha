@@ -14,7 +14,7 @@
   Learning Angular and Mongo/Mongoose/Mocha with NodeJS, JavaScript and Typescript
   <br>
 </h1>
-<h4 align="center">Using JavaScript, Typescript and NodeJS to Learn Angular, Mongo, Mongoose and Mocha. Also, using HTML, CSS, JQUERY, Ajax, JSON and XML to handle multiple data and create an interface.
+<h4 align="center">Using JavaScript, Typescript and NodeJS to Learn Angular, Mongo, Mongoose and Mocha. Also, using HTML, CSS, Bootstrap, JQUERY, Ajax, JSON and XML to handle multiple data and create responsive interfaces.
 </h4>
 
 <p align="center">
@@ -86,7 +86,7 @@ Then repeat the same steps with the module.ts file
 
 ## Credits
 
-Thanks to UNA (Universidad Nacional de Costa Rica) for teaching everything about JS, HTML, CSS, AJAX and JQuery. Also, thanks to [@OakAcademy](https://github.com/OakAcademy)  for teaching me about Angular and Mongo via the Udemy Course:
+Thanks to UNA (Universidad Nacional de Costa Rica) for teaching everything about JS, HTML, CSS, AJAX, Bootstrap and JQuery. Also, thanks to [@OakAcademy](https://github.com/OakAcademy)  for teaching me about Angular and Mongo via the Udemy Course:
 https://www.udemy.com/share/105BIS3@c5Z3qI5Ezf7OQiJ7VfWtuOMx1yi5lOHRo7hAyEqvbqGbHj4tGsUM59wq7Yz5f-OrrQ==/
 
 ---
