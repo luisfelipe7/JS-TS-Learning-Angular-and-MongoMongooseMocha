@@ -12,8 +12,8 @@ export class DurationCalculatorModel {
   // Attribute to save the start date: Sat Sep 12 2015 00:00:00 GMT-0600 (Central Standard Time)
   // (Year,Month,Day,Hours,Minutes,Seconds,Milliseconds)
   private startDate?: any = new Date(2015, 8, 12, 0, 0, 0, 0);
-  // TEST DATES
-  //private startDate?: any = new Date(2019, 11, 18, 0, 0, 0, 0);
+  // TEST DATE
+  // private startDate?: any = new Date(2021, 10, 22, 0, 0, 0, 0);
 
 
   // Constructor for my calculator
@@ -59,6 +59,12 @@ export class DurationCalculatorModel {
   setYears(years: any) {
     this.years = years;
   }
+  setMonths(months: any) {
+    this.months = months;
+  }
+  setDays(days: any) {
+    this.days = days;
+  }
 
   // Function in charge of updating the values
   updateDuration() {
@@ -72,6 +78,10 @@ export class DurationCalculatorModel {
     this.setHours(this.actualDateTime.getHours());
     // Updating the years
     this.setYears(this.calculateYears(this.actualDateTime.getFullYear(), this.actualDateTime.getMonth(), this.actualDateTime.getDate()));
+    // Updating the months
+    this.setMonths(this.calculateMonths(this.actualDateTime.getFullYear(), this.actualDateTime.getMonth(), this.actualDateTime.getDate()));
+    // Updating the days
+    this.setDays(this.calculateDays(this.actualDateTime.getFullYear(), this.actualDateTime.getMonth(), this.actualDateTime.getDate()));
     console.log('Start Date: ' + this.startDate.toString());
   }
 
@@ -143,14 +153,19 @@ export class DurationCalculatorModel {
         } else {
           // The actual month is bigger than the start date
           if (actualMonth > this.startDate.getMonth()) {
-            durationMonths = 12 - ((actualMonth + 1) - (this.startDate.getMonth() + 1));
+            durationMonths = ((actualMonth + 1) - (this.startDate.getMonth() + 1));
             // Checking the date, actual date is bigger
             if (actualDay < this.startDate.getDate()) {
               durationMonths = durationMonths - 1;
             }
             return durationMonths;
           } else {
-            // If the month is the same the day is zero then
+            // If the month is the same the months are 11
+            durationMonths = 11;
+            // But if the day is bigger than the start date then the duration months is zero
+            if (actualDay >= this.startDate.getDate()) {
+              durationMonths = 0;
+            }
             return durationMonths;
           }
         }
@@ -159,5 +174,30 @@ export class DurationCalculatorModel {
       }
     }
   }
+
+  // Calculate the days
+  calculateDays(actualYear: any, actualMonth: any, actualDay: any): any {
+    var durationDays = 0;
+    if (actualDay > this.startDate.getDate()) {
+      durationDays = actualDay - this.startDate.getDate();
+      return durationDays;
+    } else {
+      if (actualDay < this.startDate.getDate()) {
+        var previousMonthDays = this.obtainDaysPerMonth(actualMonth - 1, actualYear);
+        durationDays = (previousMonthDays - this.startDate.getDate()) + actualDay;
+        return durationDays;
+      } else {
+        return durationDays;
+      }
+    }
+  }
+
+  // Obtain the days per month
+  obtainDaysPerMonth(numberOfMonth: any, actualYear: any): any {
+    // This will return the days per month based on the month entered, 0 is the last day of the month
+    return new Date(actualYear, numberOfMonth + 1, 0).getDate();
+  }
+
+
 
 }
