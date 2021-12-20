@@ -12,4 +12,12 @@ export class ErrorPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  // ---------------------------- Using JQuery ----------------------------
+
+  $(document).ready(function() {
+
+
+  })
+
 }

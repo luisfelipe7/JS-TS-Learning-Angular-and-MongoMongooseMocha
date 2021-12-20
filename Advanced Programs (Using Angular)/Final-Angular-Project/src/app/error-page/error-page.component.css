@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0D152F;
+  font-family: 'Cardo', serif;
+}
+
+.row {
+  margin: 0;
+}
+
+a {
+  background-color: #4A4E5C;
+  border: 0px;
+  padding: 10px;
+  color: #fff;
+  font-family: 'Dosis', sans-serif;
+}
+
+a:hover {
+  background-color: #2956a3;
+}
+
+#backText:hover {
+  color: white;
+}
+
+h1 {
+  font-size: 180px;
+}
+
+h4 {
+  padding-bottom: 20px;
+  font-family: 'Dosis', sans-serif;
+}
+
+p {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+}
