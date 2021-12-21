@@ -7,7 +7,7 @@ import * as $ from "jquery";
 @Component({
   selector: 'app-duration-calculator',
   templateUrl: './duration-calculator.component.html',
-  styleUrls: ['./duration-calculator.component.css', '../../assets/themeForCounter/css/style.css', '../../assets/themeForCounter/vendor/bootstrap-icons/bootstrap-icons.css']
+  styleUrls: ['./duration-calculator.component.css', '../../assets/themeForCounter/css/style.css','../../assets/themeForCounter/css/all.css', '../../assets/themeForCounter/vendor/bootstrap-icons/bootstrap-icons.css']
 
 })
 export class DurationCalculatorComponent implements OnInit {

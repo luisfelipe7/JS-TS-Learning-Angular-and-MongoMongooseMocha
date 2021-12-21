@@ -40,6 +40,13 @@ a:hover {
   text-decoration: none;
 }
 
+.envelope{
+  background-color: #24b7a4;
+}
+.envelope:hover{
+  background-color: #0f7063;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
@@ -244,8 +251,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 #header .social-links a:hover {
-  background: #24b7a4;
-  border-color: #24b7a4;
+  background: #2A8092;
+  border-color: #2A8092;
 }
 
 /*--------------------------------------------------------------
