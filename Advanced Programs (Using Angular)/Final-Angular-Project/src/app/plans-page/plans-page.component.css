@@ -1,0 +1,29 @@
+.specialIcons {
+  text-align: center;
+}
+
+.specialClass {
+  border: 0px !important;
+  background-color: #24b7a4 !important;
+  font-family: "Raleway", sans-serif !important;
+  border-color: white !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  text-decoration: none !important;
+}
+
+.specialClass:hover {
+  background-color: #0f7063 !important;
+  border-color: white !important;
+  text-decoration: none !important;
+}
+
+.specialClass-active {
+  border: 0px !important;
+  background-color: #0f7063 !important;
+  font-family: "Raleway", sans-serif !important;
+  border-color: white !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  text-decoration: none !important;
+}

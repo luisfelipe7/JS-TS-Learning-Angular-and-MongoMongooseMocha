@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { DurationCalculatorComponent } from './duration-calculator/duration-calculator.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { PlansPageComponent } from './plans-page/plans-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    DurationCalculatorComponent
+    DurationCalculatorComponent,
+    HomeComponent,
+    PlansPageComponent
   ],
   imports: [
     BrowserModule,

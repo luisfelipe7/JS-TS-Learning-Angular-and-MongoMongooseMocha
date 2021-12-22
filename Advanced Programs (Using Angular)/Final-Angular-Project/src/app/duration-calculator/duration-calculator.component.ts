@@ -51,4 +51,23 @@ export class DurationCalculatorComponent implements OnInit {
     document.getElementsByTagName('head')[0].appendChild(node);
   }
 
+
+  goToPage(pageNumber: number) {
+    switch (pageNumber) {
+      case 1:
+        this.router.navigate(['/inicio']);
+        break;
+      case 2:
+        this.router.navigate(['/nuestrosPlanes']);
+        break;
+      case 3:
+        this.router.navigate(['/nuestroTiempoJuntos']);
+        break;
+      default:
+        this.router.navigate(['/inicio']);
+        break;
+    }
+
+  }
+
 }

@@ -21,7 +21,7 @@ export class ErrorPageComponent implements OnInit {
 
   sendToHome($event: any): void {
     // Sending the user back to the homepage
-    this.router.navigate(['/home']);
+    this.router.navigate(['/inicio']);
   }
 
 }

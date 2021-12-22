@@ -31,43 +31,23 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center">
-      <h1>Nuestro Tiempo Juntos ❤</h1>
+      <h1>Nuestra Historia </h1>
       <br>
-      <h2>Contador especial del tiempo que llevamos juntos como novios desde Septiembre 12 del 2015:</h2>
-      <div class="countdown d-flex justify-content-center" data-count="2015/09/12">
-        <div>
-          <h3>{{dCModel.getYears()}}</h3>
-          <h4>Años</h4>
-        </div>
-        <div>
-          <h3>{{dCModel.getMonths()}}</h3>
-          <h4>Meses</h4>
-        </div>
-        <div>
-          <h3>{{dCModel.getDays()}}</h3>
-          <h4>Días</h4>
-        </div>
-      </div>
-      <div class="countdown d-flex justify-content-center" data-count="2021/12/3">
-        <div>
-          <h3>{{dCModel.getHours()}}</h3>
-          <h4>Horas</h4>
-        </div>
-        <div>
-          <h3>{{dCModel.getMinutes()}}</h3>
-          <h4>Minutos</h4>
-        </div>
-        <div>
-          <h3>{{dCModel.getSeconds()}}</h3>
-          <h4>Segundos</h4>
-        </div>
-      </div>
+      <p> Nos conocimos en la Universidad Nacional de Costa Rica iniciando a cursar la carrera de Ingenieria en
+        Sistemas en el 2015,
+        en ese entonces yo tenia 17 años y ella 19 años, no fuimos compañeros de cursos en el primer semestre; sin
+        embargo,
+        estudiabamos bastante juntos y eramos muy buenos amigos. Posterior al primer semestre, empezamos a
+        matricular todos los
+        cursos que se pudieran juntos y de ahi nos volvimos muy cercanos, naciendo lo que hoy en día es una amistad
+        y amor muy grande.
+      </p>
       <div class="social-links text-center">
-        <a (click)="goToPage(1)" class="envelope"><i class="fas fa-home"></i></a>
+        <a (click)="goToPage(1)" class="active"><i class="fas fa-home"></i></a>
         &nbsp;
         <a (click)="goToPage(2)" class="envelope"><i class="fas fa-list"></i></a>
         &nbsp;
-        <a (click)="goToPage(3)" class="active"><i class="fas fa-clock"></i></a>
+        <a (click)="goToPage(3)" class="envelope"><i class="fas fa-clock"></i></a>
         &nbsp;
         <a href="https://amor-desde-septiembre12-2015.tumblr.com/" class="envelope"><i class="fas fa-envelope"></i></a>
       </div>
@@ -75,15 +55,14 @@
 
   </header><!-- End #header -->
 
+
+
   <main id="main">
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
     </section><!-- End About Us Section -->
-  </main><!-- End #main -->
-  <br>
-  <br>
-  <br>
-  <br>
+  </main>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
